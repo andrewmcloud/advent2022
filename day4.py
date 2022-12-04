@@ -13,7 +13,7 @@ def play(camps: list[str]) -> dict[str, int]:
     any_overlaps = 0
     for camp in camps:
         elf1, elf2 = build_range_set(*camp.split(","))
-        if len(elf1 & elf2) == len(elf1) or len(elf1 & elf2) == len(elf2):
+        if elf1.issubset(elf1 & elf2) or elf2.issubset(elf1 & elf2):
             contained_ranges += 1
         if elf1 & elf2:
             any_overlaps += 1
