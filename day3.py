@@ -23,6 +23,7 @@ def part2(rucks: list[str]) -> int:
         return priority.index((set(elf1) & set(elf2) & set(elf3)).pop()) + part2(rucks[3:])
     return 0
 
+
 # part 1
 print(part1(rucksacks))
 # part 2
