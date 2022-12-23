@@ -25,31 +25,31 @@ class Position:
 
     def northern_neighbors(self) -> tuple[set[Position], Position]:
         return {
-            Position(self.row - 1, self.col),  # N
+            Position(self.row - 1, self.col),      # N
             Position(self.row - 1, self.col + 1),  # NE
-            Position(self.row-1, self.col-1),  # NW
-        }, Position(self.row - 1, self.col),  # N
+            Position(self.row-1, self.col-1),      # NW
+        }, Position(self.row - 1, self.col),       # N
 
     def eastern_neighbors(self) -> tuple[set[Position], Position]:
         return {
-           Position(self.row - 1, self.col + 1),  # NE
-           Position(self.row, self.col + 1),  # E
-           Position(self.row + 1, self.col + 1),  # SE
-        }, Position(self.row, self.col + 1),  # E
+           Position(self.row - 1, self.col + 1),   # NE
+           Position(self.row, self.col + 1),       # E
+           Position(self.row + 1, self.col + 1),   # SE
+        }, Position(self.row, self.col + 1),       # E
 
     def southern_neighbors(self) -> tuple[set[Position], Position]:
         return {
-           Position(self.row + 1, self.col + 1),  # SE
-           Position(self.row + 1, self.col),  # S
-           Position(self.row + 1, self.col - 1),  # SW
-        }, Position(self.row + 1, self.col),  # S
+           Position(self.row + 1, self.col + 1),   # SE
+           Position(self.row + 1, self.col),       # S
+           Position(self.row + 1, self.col - 1),   # SW
+        }, Position(self.row + 1, self.col),       # S
 
     def western_neighbors(self) -> tuple[set[Position], Position]:
         return {
-           Position(self.row + 1, self.col - 1),  # SW
-           Position(self.row, self.col - 1),  # W
-           Position(self.row - 1, self.col - 1),  # NW
-        }, Position(self.row, self.col - 1),  # W
+           Position(self.row + 1, self.col - 1),   # SW
+           Position(self.row, self.col - 1),       # W
+           Position(self.row - 1, self.col - 1),   # NW
+        }, Position(self.row, self.col - 1),       # W
 
 
 def initialize_elf_locations(position_graph):
